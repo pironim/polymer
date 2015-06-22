@@ -1,0 +1,31 @@
+{
+  "name": "local polymer test",
+  "version": "0.0.0",
+  "description": "Some local work",
+  "main": "index.html",
+  "keywords": [
+    "polymer"
+  ],
+  "authors": [
+    "me"
+  ],
+  "license": "MIT",
+  "homepage": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5",
+    "core-icons": "Polymer/core-icons#~0.5.6",
+    "core-elements": "Polymer/core-elements#~0.5.6",
+    "paper-elements": "Polymer/paper-elements#~0.5.6"
+  },
+  "resolutions": {
+    "polymer": "^0.5",
+    "webcomponentsjs": "^0.6.0"
+  }
+}

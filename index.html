@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="elements/hello_world.html">
+    <link rel="import" href="bower_components/core-tooltip/core-tooltip.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-icons/social-icons.html">
+    <link rel="import" href="bower_components/core-icons/communication-icons.html">
+    <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+    <style>
+      h1 {
+        color: yellow;
+      }
+      hello-world::shadow div {
+        color: red;
+      }
+
+      core-toolbar {
+        background: #956;
+      }
+      core-icon {
+        background: blue;
+        width: 200px;
+        height: 400px;
+      }
+
+      .example {
+        background: #111;
+        padding: 10px;
+        height: 300px;
+      }
+
+      .example > div {
+        background: red;
+        margin: 10px;
+      }
+      .ripple {
+        position: relative;
+      }
+
+      .our-shadow {
+        display: inline-block;
+      }
+    </style>
+  </head>
+<body fullbleed layout vertical>
+  <core-header-panel flex>
+    <core-toolbar>
+      <div>Hello</div>
+    </core-toolbar>
+    <p>fasdf asdfasdf afd asdf asdfasdfasdf asdf</p>
+    <div class="example" layout vertical>
+        <div flex three>One</div>
+        <div flex>Twoo</div>
+        <div flex>Three</div>
+    </div>
+    <hello-world>Ololo hello world</hello-world>
+    <paper-shadow class="our-shadow" z="5">
+    <div class="ripple">
+        Eeeeed
+      <paper-ripple fit>
+      </paper-ripple>
+
+    </div>
+    </paper-shadow>
+    </br>
+    </br>
+    <paper-checkbox checked></paper-checkbox>
+    <paper-button>Ololo</paper-button>
+    <paper-button raised>Raised</paper-button>
+    <paper-button noink>No Ink</paper-button>
+    <paper-tabs selected="0">
+      <paper-tab>Tab 1</paper-tab>
+      <paper-tab>Tab 2</paper-tab>
+      <paper-tab>Tab 3</paper-tab>
+    </paper-tabs>
+     
+  </core-header-panel>
+
+</body>
+</html>
