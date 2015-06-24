@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="hello-world" attributes="name">
+<polymer-element name="hello-world" class="ololo ele">
   <template>
     <style>
       h1 {
@@ -20,14 +20,25 @@
     <button on-click="{{changeName}}" data="asc">Change</button>
   </template>
   <script>
-    Polymer('hello-world', {
-      ready: function(){
-        this.name = "World"
-      },
-      changeName: function(){
-        this.name = 'Something';
-        alert(this.attributes['data']);
-      }
-    });
+   (function() {
+      var foo = Math.random();
+      Polymer('hello-world', {
+        publish: {
+          name: { 'HHHH' : 1 }
+        },
+        ready: function(){
+          //this.name = "World"
+        },
+        created: function(){
+        },
+        changeName: function(){
+          this.name = 'Something';
+        },
+        attributeChanged: function(attrName, oldVal, newVal) {
+          //var newVal = this.getAttribute(attrName);
+          console.log(attrName, 'old: ' + oldVal, 'new:', newVal);
+        }
+      });
+    })();
   </script>
 </polymer-element>

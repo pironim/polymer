@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="disappearing-element">
+  <template>
+    <input name="asdasd" value="{{eee}}">
+    123!!
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        eee: {
+          value: false,
+          reflect: true
+        }
+      },
+      created: function(){
+        this.eee.value = '' //this.eee
+      }
+    });
+  </script>
+</polymer-element>
