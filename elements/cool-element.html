@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="cool-element">
+  <template>
+    <content></content>
+    You are {{praise}}
+  </template>
+  <script>
+    Polymer({
+      praise: 'cool'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name='cooler-element' extends="cool-element" noscript>
+  <template>
+    !!!
+    <shadow></shadow>
+  </template>
+</polymer-element>
