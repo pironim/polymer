@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="expressions-tag" >
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    OOO if its visible {{someData.length + someOtherData.length }}
+    <div class="{{ {active: user.selected, big: user.type == 'super'} | tokenList}}">
+      Awesome div with tokenList
+    </div>
+    <div style="{{ {color: 'red'} | styleObject }}">
+      Awesome div with tokenList
+    </div>
+    <span>
+      {{ ololo | capitalize }}
+    </span>
+  </template>
+  <script>
+    Polymer({
+      someData: ['a', 'b', 'c'],
+      someOtherData: ['rda', 'c'],
+      ololo: 'something lowercase',
+      user: {
+        selected: true,
+        type: 'super'
+      },
+      visible: false
+    });
+  </script>
+</polymer-element>

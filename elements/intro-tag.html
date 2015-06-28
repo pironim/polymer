@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<polymer-element name="intro-tag">
+  <template>
+    <say-hello-tag name="{{yourName}}"></say-hello-tag>
+    <h4>This is intro tag [[myName]] </h4>
+    <input name="something" value="[[myName]]" placeholder="Enter your name...">
+  </template>
+  <script>
+    Polymer({
+      myName: 'is what'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="say-hello-tag" attributes="name">
+  <template>
+    <span hidden?="{{showMainInfo}}">Main info</span>
+    <span>Hi this is say hello tag with it's value {{name}}</span>
+    <input name="something" value="{{name}}">
+  </template>
+  <script>
+    Polymer({
+      ready: function() {
+        this.name = 'Ololo say hello tag var'
+      },
+      showMainInfo: true
+    });
+  </script>
+</polymer-element>
+

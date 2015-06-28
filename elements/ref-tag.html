@@ -1,0 +1,16 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="ref-tag">
+  <template>
+    <template id="someOloloId">
+      first template content
+    </template>
+    <template bind="{{}}" ref="someOloloId">
+      second template content
+    </template>
+
+  </template>
+  <script>
+    Polymer({});
+  </script>
+</polymer-element>

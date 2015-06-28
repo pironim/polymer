@@ -1,0 +1,23 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="repeat-tag" >
+  <template>
+    <p>
+    <template repeat="{{m, i in my_arr}}">
+    This is iterative template {{m}} - {{i}} - for this value
+    </template>
+    </p>
+
+    <template bind="{{items}}">
+      <template repeat>
+        <h1>{{name}}</h1>
+      </template>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      my_arr: ['a', 'b', 'c'],
+      items: [{name: 'Milk'}, {name: 'Bread'}, {name: 'sugar'}]
+    });
+  </script>
+</polymer-element>

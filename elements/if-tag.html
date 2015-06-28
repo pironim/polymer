@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="if-tag" >
+  <template>
+    if tag content
+    <template bind="{{someData as s}}">
+      <template if="{{visible}}">
+        ololo if its visible {{s.ololo}}
+      </template>
+    </template>
+
+  </template>
+  <script>
+    Polymer({
+      someData: { ololo: 123},
+      visible: false
+    });
+  </script>
+</polymer-element>
